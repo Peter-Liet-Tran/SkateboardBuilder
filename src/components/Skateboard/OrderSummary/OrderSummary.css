@@ -1,8 +1,28 @@
 .OrderControl {
     padding-top: 5px;
-    padding-bottom: 5px;
-    text-align: center;
+    padding-bottom: 20px;
     background-color: lightgray;
-    width: 50%;
+    width: 30%;
     margin: 40px auto auto auto;
+}
+
+.Header {
+    text-align: center;
+}
+
+.Pricing {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.Pricing p {
+    margin: 0px;
+}
+
+.Total {
+    padding-top: 20px;
+}
+
+.Prices {
+    float: right;
 }

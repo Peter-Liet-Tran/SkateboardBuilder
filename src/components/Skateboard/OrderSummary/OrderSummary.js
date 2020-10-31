@@ -12,17 +12,18 @@ class OrderSummary extends Component {
     render () {
         return (
             <div className={classes.OrderControl}>
-                <h3>Your Order</h3>
+                <h3 className={classes.Header}>Your Order</h3>
+
+                    <div className={classes.Pricing}>
+                        <p><strong>Deck:</strong> <span className={classes.Prices}>${this.props.deck.toFixed(2)}</span></p> 
+
+                        <p><strong>Wheels:</strong> <span className={classes.Prices}>${this.props.wheels.toFixed(2)}</span></p>
+
+                        <p><strong>Trucks:</strong> <span className={classes.Prices}>${this.props.trucks.toFixed(2)}</span></p>
 
 
-                        <p style={{ textTransform: 'capitalize' }}>Deck: {this.props.deck.toFixed(2)}</p>
-
-                        <p style={{ textTransform: 'capitalize' }}>Wheels: {this.props.wheels.toFixed(2)}</p>
-
-                        <p style={{ textTransform: 'capitalize' }}>Trucks: {this.props.trucks.toFixed(2)}</p>
-
-
-                <p><strong>Total Price: ${this.props.price.toFixed( 2 )}</strong></p>
+                <p className={classes.Total}><strong>Total Price:</strong> <span className={classes.Prices}>${this.props.price.toFixed( 2 )}</span></p>
+                </div>
             </div>
         );
     }

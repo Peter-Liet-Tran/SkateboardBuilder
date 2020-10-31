@@ -1,0 +1,35 @@
+.WheelButton {
+    background-color: white;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid lightgray;
+    margin: 4px;
+    color: black;
+    font-family: inherit;
+    font-size: 1.2em;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    box-shadow: 2px 2px 2px gray;
+    float: left;
+}
+
+.WheelButton:hover {
+    background-color:#F4F4F4;
+}
+
+.Wheels 
+{
+  display: grid;
+  text-align: center;
+  grid-template-columns: auto auto auto;
+}
+
+.WheelButton img {
+  height: 50px;
+}
+
+
+.WheelButton p {
+  margin: 0px;
+}

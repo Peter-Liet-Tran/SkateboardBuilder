@@ -1,0 +1,24 @@
+.OrderButton {
+    background-color: #696969;
+    cursor: pointer;
+    color: black;
+    font-family: inherit;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border: none;
+}
+
+.Price 
+{
+    color: black;
+}
+
+.OrderButton:hover, .OrderButton:active {
+    background-color: #212121;
+    color: lightgray;
+}
+
+.BuildControls 
+{
+    text-align: center;
+}

@@ -1,0 +1,14 @@
+.full {
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 600px;
+}
+
+.SkateboardWrapper {
+    text-align: center;
+    font-weight: bold;
+}

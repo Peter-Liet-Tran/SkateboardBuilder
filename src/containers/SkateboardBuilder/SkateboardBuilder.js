@@ -3,7 +3,7 @@ import classes from './SkateboardBuilder.css';
 
 import Aux from '../../hoc/ReactAux/ReactAux';
 import Skateboard from '../../components/Skateboard/Skateboard';
-import Cart from '../../components/Skateboard/BuildControls/Cart';
+import CheckoutButton from '../../components/Skateboard/BuildControls/CheckoutButton';
 import ViewPartControls from '../../components/Skateboard/BuildControls/ViewPartControls/ViewPartControls';
 import BuildDeckControls from '../../components/Skateboard/BuildControls/BuildDeckControls/BuildDeckControls';
 import BuildTruckControls from '../../components/Skateboard/BuildControls/BuildTruckControls/BuildTruckControls';
@@ -82,7 +82,7 @@ class SkateboardBuilder extends Component {
     render () {
         return (
             <Aux>
-                {/*<Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
+                <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
                     <OrderSummary 
                         deck={this.state.deckPrice}
                         wheels={this.state.wheelPrice}
@@ -90,7 +90,7 @@ class SkateboardBuilder extends Component {
                         price={this.state.totalPrice}
                         purchaseCancelled={this.purchaseCancelHandler}
                         purchaseContinued={this.purchaseContinueHandler} />
-        </Modal> */}
+                </Modal>
                 <Skateboard truckColor={this.state.truckColor} wheelColor={this.state.wheelColor} deckColor={this.state.deckColor} ingredients={this.state.ingredients} />
                
                 <ViewPartControls
@@ -118,9 +118,8 @@ class SkateboardBuilder extends Component {
                         purchaseContinued={this.purchaseContinueHandler} />
 
 
-                {/*<Cart
-                    ordered={this.purchaseHandler}
-                price={this.state.totalPrice} />   */}
+                <CheckoutButton
+                    ordered={this.purchaseHandler} />
 
 
             </Aux>

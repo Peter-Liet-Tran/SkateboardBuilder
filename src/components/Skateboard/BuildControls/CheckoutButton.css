@@ -6,6 +6,7 @@
     font-size: 1.2em;
     padding: 15px 30px;
     border: none;
+    margin-top: 20px;
 }
 
 .Price 
@@ -18,7 +19,7 @@
     color: lightgray;
 }
 
-.BuildControls 
+.CheckoutWrapper 
 {
     text-align: center;
 }

@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import classes from './SkateboardBuilder.css';
 
 import Aux from '../../hoc/ReactAux/ReactAux';
-import Skateboard from '../../components/Skateboard/Skateboard';
-import CheckoutButton from '../../components/Skateboard/BuildControls/CheckoutButton';
-import ViewPartControls from '../../components/Skateboard/BuildControls/ViewPartControls/ViewPartControls';
-import BuildDeckControls from '../../components/Skateboard/BuildControls/BuildDeckControls/BuildDeckControls';
-import BuildTruckControls from '../../components/Skateboard/BuildControls/BuildTruckControls/BuildTruckControls';
-import BuildWheelControls from '../../components/Skateboard/BuildControls/BuildWheelControls/BuildWheelControls';
+import Skateboard from '../../components/SkateboardBuilder/Skateboard/Skateboard';
+import CheckoutButton from '../../components/OrderSummary/CheckoutButton';
+import ViewPartControls from '../../components/SkateboardBuilder/BuildControls/ViewPartControls/ViewPartControls';
+import BuildDeckControls from '../../components/SkateboardBuilder/BuildControls/BuildDeckControls/BuildDeckControls';
+import BuildTruckControls from '../../components/SkateboardBuilder/BuildControls/BuildTruckControls/BuildTruckControls';
+import BuildWheelControls from '../../components/SkateboardBuilder/BuildControls/BuildWheelControls/BuildWheelControls';
 import Modal from '../../components/UI/Modal/Modal';
-import OrderSummary from '../../components/Skateboard/OrderSummary/OrderSummary';
+import OrderSummary from '../../components/OrderSummary/OrderSummary';
 
 class SkateboardBuilder extends Component {
     state = {

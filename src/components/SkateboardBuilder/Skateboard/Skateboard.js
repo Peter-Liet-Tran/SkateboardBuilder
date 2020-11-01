@@ -1,7 +1,7 @@
 import React from 'react';
 
 import classes from './Skateboard.css';
-import Part from './Part/Part';
+import Part from '../Part/Part';
 
 const Skateboard = ( props ) => {
         return (

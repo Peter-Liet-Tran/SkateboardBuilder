@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import classes from './OrderSummary.css';
+import classes from './Checkout.css';
 
-class OrderSummary extends Component {
+class Checkout extends Component {
     render () {
         return (
             <div className={classes.OrderControl}>
@@ -18,9 +18,34 @@ class OrderSummary extends Component {
 
                 <p className={classes.Total}><strong>Total Price:</strong> <span className={classes.Prices}>${this.props.price.toFixed( 2 )}</span></p>
                 </div>
+                <form>
+                <label>
+                    First Name:
+                    <input type="text" name="firstName" />
+                </label>
+                <br/>
+                <label>
+                    Last Name:
+                    <input type="text" name="LastName" />
+                </label>
+                <br/>
+                <label>
+                    Phone:
+                    <input type="text" name="phone" />
+                </label>
+                <br/>
+                <label>
+                    Email:
+                    <input type="text" name="email" />
+                </label>
+                <br/>
+
+                <input type="submit" value="Submit" />
+                </form>
+                
             </div>
         );
     }
 }
 
-export default OrderSummary;
+export default Checkout;

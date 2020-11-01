@@ -4,6 +4,7 @@ import classes from './SkateboardBuilder.css';
 import Aux from '../../hoc/ReactAux/ReactAux';
 import Skateboard from '../../components/SkateboardBuilder/Skateboard/Skateboard';
 import CheckoutButton from '../../components/OrderSummary/CheckoutButton';
+import Checkout from '../../components/CheckoutScreen/Checkout';
 import ViewPartControls from '../../components/SkateboardBuilder/BuildControls/ViewPartControls/ViewPartControls';
 import BuildDeckControls from '../../components/SkateboardBuilder/BuildControls/BuildDeckControls/BuildDeckControls';
 import BuildTruckControls from '../../components/SkateboardBuilder/BuildControls/BuildTruckControls/BuildTruckControls';
@@ -83,7 +84,7 @@ class SkateboardBuilder extends Component {
         return (
             <Aux>
                 <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
-                    <OrderSummary 
+                    <Checkout 
                         deck={this.state.deckPrice}
                         wheels={this.state.wheelPrice}
                         trucks={this.state.truckPrice}
@@ -109,7 +110,7 @@ class SkateboardBuilder extends Component {
                     truckSelected={this.changeTruckHandler}
                 />
 
-<OrderSummary 
+                <OrderSummary 
                         deck={this.state.deckPrice}
                         wheels={this.state.wheelPrice}
                         trucks={this.state.truckPrice}

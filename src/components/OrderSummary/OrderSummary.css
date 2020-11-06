@@ -1,28 +1,44 @@
 .OrderControl {
     padding-top: 5px;
     padding-bottom: 20px;
-    background-color: lightgray;
-    width: 30%;
+    width: 25%;
     margin: 40px auto auto auto;
 }
 
-.Header {
-    text-align: center;
-}
-
-.Pricing {
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
-.Pricing p {
-    margin: 0px;
-}
-
 .Total {
-    padding-top: 20px;
+    text-align: right;
 }
 
-.Prices {
-    float: right;
-}
+  table h1{
+    font-size: 1.5em;
+    color: #222;
+  }
+  table h2{font-size: .9em;}
+  table h3{
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 2em;
+  }
+  table p{
+    font-size: .8em;
+    color: #666;
+    line-height: 1.2em;
+  }
+  table{
+    width: 100%;
+    border-collapse: collapse;
+  }
+  td{
+    padding: 5px 0 5px 15px;
+    border-bottom: 1px solid lightgray
+  }
+  .tabletitle{
+    background: lightgray;
+  }
+  .Part{
+      border-bottom: 1px solid #EEE;
+    }
+  
+  
+    
+    

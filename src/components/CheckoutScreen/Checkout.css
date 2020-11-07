@@ -9,6 +9,10 @@ input[type=text] {
     text-align: right;
 }
 
+.LabelOrder {
+  font-size: .9em;
+}
+
   table h1{
     font-size: 1.5em;
     color: #222;
@@ -39,4 +43,19 @@ input[type=text] {
       border-bottom: 1px solid #EEE;
     }
   
-  
+  .SubmitButton {
+      background-color: lightgray;
+      cursor: pointer;
+      color: black;
+      font-family: inherit;
+      font-size: 1.2em;
+      padding: 10px 20px;
+      border: none;
+      margin-top: 10px;
+  }
+
+    
+  .SubmitButton:hover {
+    background-color: rgb(28, 151, 34);
+    color: white
+}

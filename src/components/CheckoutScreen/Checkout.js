@@ -55,13 +55,13 @@ class Checkout extends Component {
                         </Label>
                     </FormGroup>
                     <FormGroup>
-                        <Label for="message" className={classes.LabelOrder}>
-                            Message:
-                            <Input type="text" name="message" onChange={this.handleChange} />
+                        <Label for="phone" className={classes.LabelOrder}>
+                            Phone:
+                            <Input type="text" name="phone" onChange={this.handleChange} />
                         </Label>
                     </FormGroup>
 
-                <Button>Submit</Button>
+                <Button color="success">Submit</Button>
                 </Form>
                 
             </div>

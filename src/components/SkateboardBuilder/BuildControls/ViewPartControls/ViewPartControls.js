@@ -1,13 +1,13 @@
 import React from 'react';
-
+import {Button} from 'reactstrap';
 import classes from './ViewPartControls.css';
 
 
 const viewPartControls = (props) => (
     <div className={classes.PartsControl}>
-        <button onClick={() => props.partSelected("deck")}>Deck</button>
-        <button onClick={() => props.partSelected("wheels")}>Wheels</button>
-        <button onClick={() => props.partSelected("trucks")}>Trucks</button>
+        <Button color="secondary" onClick={() => props.partSelected("deck")}>Deck</Button>
+        <Button color="secondary" onClick={() => props.partSelected("wheels")}>Wheels</Button>
+        <Button color="secondary" onClick={() => props.partSelected("trucks")}>Trucks</Button>
     </div>
 );
 

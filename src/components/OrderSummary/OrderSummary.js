@@ -17,17 +17,17 @@ class OrderSummary extends Component {
                     <tbody>
                     <tr className={classes.Part}>
                         <td><p>Deck</p></td>
-                        <td><p>${this.props.deck.toFixed(2)}</p></td>
+                        <td><p style={{color: this.props.deckPriceColor}}>${this.props.deck.toFixed(2)}</p></td>
                     </tr>
 
                     <tr className={classes.Part}>
                         <td><p>Wheels</p></td>
-                        <td><p>${this.props.wheels.toFixed(2)}</p></td>
+                        <td><p style={{color: this.props.wheelPriceColor}}>${this.props.wheels.toFixed(2)}</p></td>
                     </tr>
 
                     <tr className={classes.Part}>
                         <td><p>Trucks</p></td>
-                        <td><p>${this.props.trucks.toFixed(2)}</p></td>
+                        <td><p style={{color: this.props.truckPriceColor}}>${this.props.trucks.toFixed(2)}</p></td>
                     </tr>
                     </tbody>
 

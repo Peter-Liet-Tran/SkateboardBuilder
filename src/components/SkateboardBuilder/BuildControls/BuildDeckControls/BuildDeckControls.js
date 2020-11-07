@@ -1,4 +1,8 @@
 import React from 'react';
+import {
+    Card, CardImg, CardBody,
+    CardTitle
+  } from 'reactstrap';
 
 import classes from './BuildDeckControls.css';
 
@@ -17,14 +21,20 @@ const buildDeckControls = (props) => (
     <div className={classes.DeckControl}>
         <div className={classes.Decks}>
         {controls.map(ctrl => (
-            <div className={classes.DeckButton}
+            /*<div className={classes.DeckButton}
             onClick={() => props.deckSelected(ctrl.type, ctrl.price)}>
             <img            
             src={require("./Images/" + ctrl.label + "deck.svg")}
             alt={ctrl.label}
             key={ctrl.label} />
             <p>${ctrl.price.toFixed(2)}</p>
-            </div>
+        </div>*/
+        <Card onClick={() => props.deckSelected(ctrl.type, ctrl.price)} className={classes.DeckButton}>
+            <CardImg top width="100%" src={require("./Images/" + ctrl.label + "deck.svg")} alt="Card image cap" />
+            <CardBody>
+                <CardTitle tag="h5">${ctrl.price.toFixed(2)}</CardTitle>
+            </CardBody>
+        </Card>
         ))}
         </div>
     </div>

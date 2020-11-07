@@ -22,8 +22,13 @@ class SkateboardBuilder extends Component {
         totalPriceColor: "black",
 
         deckPrice: 20.00,
+        deckPriceColor: "gray",
+
         wheelPrice: 20.00,
+        wheelPriceColor: "gray",
+
         truckPrice: 20.00,
+        truckPriceColor: "gray",
         
         deckShow: true,
         wheelsShow: false,
@@ -37,7 +42,11 @@ class SkateboardBuilder extends Component {
         const newTotal = oldTotal + price;
         this.setState( { totalPrice: newTotal } );
 
-        this.setState( { totalPriceColor: "red" } );
+        this.setState( { totalPriceColor: "#F96B6B", deckPriceColor: "#F96B6B" } );
+
+        this.timer = setTimeout(_ => {
+          this.setState({totalPriceColor: "black", deckPriceColor: "gray"}); // fade back in
+        }, 400); // animation timing offset
     }
 
     changeWheelHandler = ( color, price ) => {
@@ -46,6 +55,12 @@ class SkateboardBuilder extends Component {
         
         const newTotal = oldTotal + price;
         this.setState( { totalPrice: newTotal } );
+
+        this.setState( { totalPriceColor: "#F96B6B", wheelPriceColor: "#F96B6B" } );
+
+        this.timer = setTimeout(_ => {
+          this.setState({totalPriceColor: "black", wheelPriceColor: "gray"}); // fade back in
+        }, 400); // animation timing offset
     }
 
     changeTruckHandler = ( color, price ) => {
@@ -54,6 +69,12 @@ class SkateboardBuilder extends Component {
         
         const newTotal = oldTotal + price;
         this.setState( { totalPrice: newTotal } );
+
+        this.setState( { totalPriceColor: "#F96B6B", truckPriceColor: "#F96B6B" } );
+
+        this.timer = setTimeout(_ => {
+          this.setState({totalPriceColor: "black", truckPriceColor: "gray"}); // fade back in
+        }, 500); // animation timing offset
     }
 
     changePartHandler = ( part ) => {
@@ -119,6 +140,9 @@ class SkateboardBuilder extends Component {
                         trucks={this.state.truckPrice}
                         totalPrice={this.state.totalPrice}
                         totalPriceColor={this.state.totalPriceColor}
+                        deckPriceColor={this.state.deckPriceColor}
+                        wheelPriceColor={this.state.wheelPriceColor}
+                        truckPriceColor={this.state.truckPriceColor}
                         purchaseCancelled={this.purchaseCancelHandler}
                         purchaseContinued={this.purchaseContinueHandler} />
 

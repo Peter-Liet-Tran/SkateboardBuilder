@@ -1,4 +1,8 @@
 import React from 'react';
+import {
+    Card, CardImg, CardBody,
+    CardTitle
+  } from 'reactstrap';
 
 import classes from './BuildWheelControls.css';
 
@@ -17,14 +21,21 @@ const buildWheelControls = (props) => (
     <div>
         <div className={classes.Wheels}>
         {controls.map(ctrl => (
-            <div className={classes.WheelButton}
+            /*<div className={classes.WheelButton}
             onClick={() => props.wheelSelected(ctrl.type, ctrl.price)}>
             <img            
             src={require("./Images/" + ctrl.label + "wheel.svg")}
             alt={ctrl.label}
             key={ctrl.label} />
             <p>${ctrl.price.toFixed(2)}</p>
-            </div>
+            </div>*/
+
+            <Card onClick={() => props.deckSelected(ctrl.type, ctrl.price)} className={classes.WheelButton}>
+                <CardImg top width="100%" src={require("./Images/" + ctrl.label + "wheel.svg")} alt="Card image cap" />
+                <CardBody>
+                    <CardTitle tag="h5">${ctrl.price.toFixed(2)}</CardTitle>
+                </CardBody>
+            </Card>
         ))}
         </div>
     </div>

@@ -1,4 +1,8 @@
 import React from 'react';
+import {
+    Card, CardImg, CardBody,
+    CardTitle
+  } from 'reactstrap';
 
 import classes from './BuildTruckControls.css';
 
@@ -17,14 +21,20 @@ const buildTruckControls = (props) => (
     <div className={classes.TrucksControl}>
         <div className={classes.Trucks}>
         {controls.map(ctrl => (
-            <div className={classes.TruckButton}
+            /*<div className={classes.TruckButton}
             onClick={() => props.truckSelected(ctrl.type, ctrl.price)}>
             <img            
             src={require("./Images/" + ctrl.label + "trucks.svg")}
             alt={ctrl.label}
             key={ctrl.label} />
             <p>${ctrl.price.toFixed(2)}</p>
-            </div>
+            </div>*/
+            <Card onClick={() => props.truckSelected(ctrl.type, ctrl.price)} className={classes.TruckButton}>
+                <CardImg top width="100%" src={require("./Images/" + ctrl.label + "trucks.svg")} alt="Card image cap" />
+                <CardBody>
+                    <CardTitle tag="h5">${ctrl.price.toFixed(2)}</CardTitle>
+                </CardBody>
+            </Card>
         ))}
     </div>
     </div>

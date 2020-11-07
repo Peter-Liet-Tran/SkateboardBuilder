@@ -1,26 +1,12 @@
 import React, { Component } from 'react';
-import emailjs from "emailjs-com";
-
+import { Form, FormGroup, Input, Label, Button} from 'reactstrap';
 import classes from './Checkout.css';
-
-
-function sendEmail(e) {
-    e.preventDefault();
-
-    emailjs.sendForm('gmail', 'template_h1s3xxg', e.target, 'user_piQ5M43yD1zaZSBRB9jGj')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-      e.target.reset();
-}
 
 class Checkout extends Component {
     render () {
         return (
-            <div className={classes.OrderControl}>
-                <h3 className={classes.Header}>Your Order</h3>
+            <div>
+                <h3 className={classes.Header}>Order Summary</h3>
 
                 <table>
                     <thead>
@@ -54,30 +40,29 @@ class Checkout extends Component {
 
                 </table>
                 <br/>
-                <form onSubmit={sendEmail}>
-                <label className={classes.LabelOrder}>
-                    First Name:
-                    <input type="text" name="name" />
-                </label>
-                <br/>
-                <br/>
-                <label className={classes.LabelOrder}>
-                    Subject:
-                    <input type="text" name="subject" />
-                </label>
-                <br/>
-                <label className={classes.LabelOrder}>
-                    Email:
-                    <input type="email" name="email" />
-                </label>
-                <label className={classes.LabelOrder}>
-                    Message:
-                    <input type="text" name="message" />
-                </label>
-                <br/>
+                <h3 className={classes.Header}>Information</h3>
+                <Form>
+                    <FormGroup>
+                        <Label for="name" className={classes.LabelOrder}>
+                            Name:
+                            <Input type="text" name="name" onChange={this.handleChange} />
+                        </Label>
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="email" className={classes.LabelOrder}>
+                            Email:
+                            <Input type="email" name="email" onChange={this.handleChange} />
+                        </Label>
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="message" className={classes.LabelOrder}>
+                            Message:
+                            <Input type="text" name="message" onChange={this.handleChange} />
+                        </Label>
+                    </FormGroup>
 
-                <input className={classes.SubmitButton} type="submit" value="Submit" />
-                </form>
+                <Button>Submit</Button>
+                </Form>
                 
             </div>
         );

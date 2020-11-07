@@ -1,17 +1,11 @@
-input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-  }
-
-  .Total {
+.Total {
     text-align: right;
 }
 
 .LabelOrder {
   font-size: .9em;
 }
+
 
   table h1{
     font-size: 1.5em;

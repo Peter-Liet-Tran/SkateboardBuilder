@@ -19,6 +19,7 @@ class SkateboardBuilder extends Component {
         truckColor: "#898989",
 
         totalPrice: 60.00,
+        totalPriceColor: "black",
 
         deckPrice: 20.00,
         wheelPrice: 20.00,
@@ -35,6 +36,8 @@ class SkateboardBuilder extends Component {
         
         const newTotal = oldTotal + price;
         this.setState( { totalPrice: newTotal } );
+
+        this.setState( { totalPriceColor: "red" } );
     }
 
     changeWheelHandler = ( color, price ) => {
@@ -114,7 +117,8 @@ class SkateboardBuilder extends Component {
                         deck={this.state.deckPrice}
                         wheels={this.state.wheelPrice}
                         trucks={this.state.truckPrice}
-                        price={this.state.totalPrice}
+                        totalPrice={this.state.totalPrice}
+                        totalPriceColor={this.state.totalPriceColor}
                         purchaseCancelled={this.purchaseCancelHandler}
                         purchaseContinued={this.purchaseContinueHandler} />
 

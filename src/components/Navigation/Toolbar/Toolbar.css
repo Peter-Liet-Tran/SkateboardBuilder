@@ -11,10 +11,16 @@
     padding: 0 20px;
     box-sizing: border-box;
     z-index: 90;
+    color: white;
 }
 
-.Toolbar nav {
-    height: 100%;
+.Toolbar a {
+    color: lightgray;
+
+}
+
+.Toolbar a:hover {
+    color: white;
 }
 
 .Logo {

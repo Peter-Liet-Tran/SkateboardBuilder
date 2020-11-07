@@ -1,19 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import {
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+} from 'reactstrap';
+  
 
 import classes from './Toolbar.css';
-import NavigationItems from '../NavigationItems/NavigationItems';
-import DrawerToggle from '../SideDrawer/DrawerToggle/DrawerToggle';
 
-const toolbar = ( props ) => (
-    <header className={classes.Toolbar}>
-        <DrawerToggle clicked={props.drawerToggleClicked} />
-        <div className={classes.Logo}>
-            Skateboard Builder
-        </div>
-        <nav className={classes.DesktopOnly}>
-            <NavigationItems />
-        </nav>
-    </header>
-);
+const toolbar = ( props ) => {    
+    return(
+    <div className={classes.Toolbar}>
+        <Nav className="mr-auto">
+        <NavbarBrand href="/">SkateBoard Builder</NavbarBrand>
+            <NavItem>
+              <NavLink href="#" onClick={props.ordered}>Checkout</NavLink>
+            </NavItem>
+        </Nav>
+    </div>
+    );
+}
 
 export default toolbar;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Table } from 'reactstrap';
 
 import classes from './OrderSummary.css';
 
@@ -6,7 +7,7 @@ class OrderSummary extends Component {
     render () {
         return (
             <div className={classes.OrderControl}>
-                <table>
+                <Table>
                     <thead>
                     <tr className={classes.tabletitle}>
                         <td><h2>Part</h2></td>
@@ -37,7 +38,7 @@ class OrderSummary extends Component {
                         <td style={{color: this.props.totalPriceColor}} ><h2>${this.props.totalPrice.toFixed(2)}</h2></td>
                     </tr>
                     </tfoot>
-                </table>
+                </Table>
             </div>
         );
     }

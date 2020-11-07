@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import classes from './SkateboardBuilder.css';
 
 import Aux from '../../hoc/ReactAux/ReactAux';
+import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 import Skateboard from '../../components/SkateboardBuilder/Skateboard/Skateboard';
 import CheckoutButton from '../../components/OrderSummary/CheckoutButton';
 import Checkout from '../../components/CheckoutScreen/Checkout';
@@ -18,16 +19,16 @@ class SkateboardBuilder extends Component {
         wheelColor: 'black',
         truckColor: "#898989",
 
-        totalPrice: 60.00,
+        totalPrice: 38.00,
         totalPriceColor: "black",
 
         deckPrice: 20.00,
         deckPriceColor: "gray",
 
-        wheelPrice: 20.00,
+        wheelPrice: 8.00,
         wheelPriceColor: "gray",
 
-        truckPrice: 20.00,
+        truckPrice: 10.00,
         truckPriceColor: "gray",
         
         deckShow: true,
@@ -42,7 +43,7 @@ class SkateboardBuilder extends Component {
         const newTotal = oldTotal + price;
         this.setState( { totalPrice: newTotal } );
 
-        this.setState( { totalPriceColor: "#F96B6B", deckPriceColor: "#F96B6B" } );
+        this.setState( { totalPriceColor: "#2EBF44", deckPriceColor: "#2EBF44" } );
 
         this.timer = setTimeout(_ => {
           this.setState({totalPriceColor: "black", deckPriceColor: "gray"}); // fade back in
@@ -56,7 +57,7 @@ class SkateboardBuilder extends Component {
         const newTotal = oldTotal + price;
         this.setState( { totalPrice: newTotal } );
 
-        this.setState( { totalPriceColor: "#F96B6B", wheelPriceColor: "#F96B6B" } );
+        this.setState( { totalPriceColor: "#2EBF44", wheelPriceColor: "#2EBF44" } );
 
         this.timer = setTimeout(_ => {
           this.setState({totalPriceColor: "black", wheelPriceColor: "gray"}); // fade back in
@@ -70,7 +71,7 @@ class SkateboardBuilder extends Component {
         const newTotal = oldTotal + price;
         this.setState( { totalPrice: newTotal } );
 
-        this.setState( { totalPriceColor: "#F96B6B", truckPriceColor: "#F96B6B" } );
+        this.setState( { totalPriceColor: "#2EBF44", truckPriceColor: "#2EBF44" } );
 
         this.timer = setTimeout(_ => {
           this.setState({totalPriceColor: "black", truckPriceColor: "gray"}); // fade back in
@@ -107,6 +108,8 @@ class SkateboardBuilder extends Component {
     render () {
         return (
             <Aux>
+                <Toolbar ordered={this.purchaseHandler} />
+
                 <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
                     <Checkout 
                         deck={this.state.deckPrice}
@@ -149,8 +152,6 @@ class SkateboardBuilder extends Component {
 
                 <CheckoutButton
                     ordered={this.purchaseHandler} />
-
-
             </Aux>
         );
     }
